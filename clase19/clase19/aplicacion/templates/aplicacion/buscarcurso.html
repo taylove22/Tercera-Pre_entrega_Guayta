@@ -1,0 +1,13 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+{% endblock titulo %}
+ 
+{% block contenido %}
+<h2> Buscar curso </h2>
+<form action="/aplicacion/buscar2" method = "post">
+     {% csrf_token %}
+     <p>Patron a buscar en cursos: <input type="text" name="Buscar"></p>
+     <input type="submit" value="Enviar">
+{% endblock contenido %}
